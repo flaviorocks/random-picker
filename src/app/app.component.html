@@ -2,26 +2,30 @@
   <span>Random Picker</span>
 </mat-toolbar>
 
-<mat-list>
-  <mat-list-item *ngFor='let item of sourceList; let i = index'>
-    {{item.text}}
-    <button type='button' mat-icon-button aria-label='delete sourceList item'
-      (click)='deleteItem(i)'>
-      <mat-icon>delete</mat-icon>
-    </button>
-  </mat-list-item>
-</mat-list>
+<main>
 
-<app-add-item-form (newItem)='onNewItem($event)'></app-add-item-form>
+  <mat-list>
+    <mat-list-item *ngFor='let item of sourceList; let i = index'>
+      {{item.text}}
+      <button type='button' mat-icon-button aria-label='delete sourceList item'
+              (click)='deleteItem(i)'>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
 
-<app-pick-item-form [sourceList]='sourceList'
-                    (pickedList)='onPickedList($event)'>
-</app-pick-item-form>
+  <app-add-item-form (newItem)='onNewItem($event)'></app-add-item-form>
 
-<mat-list>
-  <mat-list-item *ngFor='let item of pickedList'>
-    {{item.text}}
-  </mat-list-item>
-</mat-list>
+  <app-pick-item-form [sourceList]='sourceList'
+                      (pickedList)='onPickedList($event)'>
+  </app-pick-item-form>
+
+  <mat-list>
+    <mat-list-item *ngFor='let item of pickedList'>
+      {{item.text}}
+    </mat-list-item>
+  </mat-list>
+
+</main>
 
 <router-outlet></router-outlet>
