@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/random-picker/",
-  "start_url": "./random-picker/",
+  "start_url": "/random-picker/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
