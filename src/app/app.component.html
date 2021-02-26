@@ -3,7 +3,13 @@
 </mat-toolbar>
 
 <mat-list>
-  <mat-list-item *ngFor='let item of list'>{{item.text}}</mat-list-item>
+  <mat-list-item *ngFor='let item of list; let i = index'>
+    {{item.text}}
+    <button type='button' mat-icon-button aria-label='delete list item'
+      (click)='deleteItem(i)'>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-list-item>
 </mat-list>
 
 <app-add-item-form (newItem)='onNewItem($event)'></app-add-item-form>

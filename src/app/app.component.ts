@@ -8,9 +8,13 @@ import { ListItem } from './item/list-item';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public list = new Set<ListItem>();
+  public list: ListItem[] = [];
 
   onNewItem(newItem: ListItem) {
-    this.list.add(newItem);
+    this.list.push(newItem);
+  }
+
+  deleteItem(index: number) {
+    this.list.splice(index, 1);
   }
 }
