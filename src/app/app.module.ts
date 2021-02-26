@@ -16,11 +16,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AddItemFormComponent } from './add-item-form/add-item-form.component';
+import { PickItemFormComponent } from './pick-item-form/pick-item-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddItemFormComponent
+    AddItemFormComponent,
+    PickItemFormComponent
   ],
   imports: [
     BrowserModule,

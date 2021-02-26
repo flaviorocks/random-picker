@@ -1,0 +1,9 @@
+<form [formGroup]='pickItemsForm' (ngSubmit)='onSubmit()'
+      fxLayout='row' fxLayoutAlign='space-around'>
+  <mat-form-field>
+    <mat-label>Size</mat-label>
+    <input type='number' matInput formControlName='size'>
+  </mat-form-field>
+
+  <button type='submit' mat-button color='primary'>Pick Items</button>
+</form>

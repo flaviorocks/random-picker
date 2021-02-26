@@ -8,13 +8,18 @@ import { ListItem } from './item/list-item';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public list: ListItem[] = [];
-
-  onNewItem(newItem: ListItem) {
-    this.list.push(newItem);
-  }
+  public sourceList: ListItem[] = [];
+  public pickedList: ListItem[] = [];
 
   deleteItem(index: number) {
-    this.list.splice(index, 1);
+    this.sourceList.splice(index, 1);
+  }
+
+  onNewItem(newItem: ListItem) {
+    this.sourceList.push(newItem);
+  }
+
+  onPickedList(pickedList: ListItem[]) {
+    this.pickedList = pickedList;
   }
 }
