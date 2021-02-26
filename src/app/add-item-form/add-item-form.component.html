@@ -1,7 +1,7 @@
 <form [formGroup]='addItemForm' (ngSubmit)='onSubmit()'>
   <mat-form-field>
     <mat-label>Text</mat-label>
-    <input type='text' matInput formControlName='text'>
+    <input type='text' matInput formControlName='text' autocomplete='off'>
   </mat-form-field>
 
   <button type='submit' mat-button color='primary'>Add</button>
