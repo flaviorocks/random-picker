@@ -1,11 +1,20 @@
+import { JSONSchemaObject } from '@ngx-pwa/local-storage';
+
+export interface IListItem {
+  text: string;
+}
+
+export const IListItemSchema: JSONSchemaObject = {
+  type: 'object',
+  properties: {
+    text: { type: 'string' },
+  },
+};
+
 export class ListItem {
-  private _text: string;
+  public text: string;
 
   constructor(text: string) {
-    this._text = text;
-  }
-
-  get text(): string {
-    return this._text;
+    this.text = text;
   }
 }
